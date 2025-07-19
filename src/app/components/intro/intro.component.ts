@@ -7,7 +7,7 @@ import { Component, input } from "@angular/core";
       id="intro"
       class="h-[100dvh] grid place-items-center text-center">
       <div
-        class="w-5/6 md:w-1/2 flex flex-col mx-auto justify-center bg-[#d5a97d]/70 backdrop-blur-xs rounded-xl">
+        class="w-5/6 md:w-fit md:px-8 flex flex-col mx-auto justify-center bg-[#d5a97d]/70 backdrop-blur-xs rounded-xl">
         <div class="flex flex-col gap-4 px-4 py-8">
           <img
             src="/assets/images/persons.webp"
@@ -17,23 +17,11 @@ import { Component, input } from "@angular/core";
             class="rounded-full mx-auto border border-orange-200 outline outline-orange-100 hover:scale-110 transition-transform shadow-lg" />
           <p class="text-4xl font-cursive font-bold">Beatriz e Gabriel</p>
         </div>
-        @if(!isMarriageCompleted()) {
         <p class="text-lg md:text-2xl text-pretty">
-          Convidam para a cerimônia de casamento
+          Agradecemos pela participação de todos!
         </p>
-        } @else {
-        <p class="text-lg md:text-2xl text-pretty">
-          Estamos felizes pela sua participação
-        </p>
-        }
-        <div class="flex flex-col gap-4 mt-4">
-          <div>
-            <p class="text-xl md:text-3xl mx-2">Sábado às 15h</p>
-            <p class="text-lg md:text-2xl">22 de Fevereiro de 2025</p>
-          </div>
-        </div>
         <nav
-          class="flex flex-row gap-2 justify-stretch items-center mx-auto py-4">
+          class="flex flex-row gap-2 justify-around items-center mx-auto py-4 w-full">
           @if (!isMarriageCompleted()) {
           <div class="flex flex-col items-center">
             <p class="uppercase text-xs">Regras</p>
@@ -53,7 +41,7 @@ import { Component, input } from "@angular/core";
           </div>
           } @else {
           <div class="flex flex-col items-center">
-            <p class="uppercase text-xs">Fotos/Videos</p>
+            <p class="uppercase text-xs">Fotos e Videos</p>
             <a
               href="https://drive.google.com/drive/folders/1PNO0EwKBAtg51okKBWVxjg9xoa84S5m_"
               target="_blank"
@@ -88,7 +76,7 @@ import { Component, input } from "@angular/core";
           </div>
           }
           <div class="flex flex-col items-center">
-            <p class="uppercase text-xs">Presentes</p>
+            <p class="uppercase text-xs">Lista de Presentes</p>
             <a
               href="https://listas.casasbahia.com.br/beatrizbiel"
               target="_blank"
@@ -100,7 +88,7 @@ import { Component, input } from "@angular/core";
                 fill="#d5b494">
                 <title>Lista de Presentes</title>
                 <path
-                  d="M9.06,1.93C7.17,1.92 5.33,3.74 6.17,6H3A2,2 0 0,0 1,8V10A1,1 0 0,0 2,11H11V8H13V11H22A1,1 0 0,0 23,10V8A2,2 0 0,0 21,6H17.83C19,2.73 14.6,0.42 12.57,3.24L12,4L11.43,3.22C10.8,2.33 9.93,1.94 9.06,1.93M9,4C9.89,4 10.34,5.08 9.71,5.71C9.08,6.34 8,5.89 8,5A1,1 0 0,1 9,4M15,4C15.89,4 16.34,5.08 15.71,5.71C15.08,6.34 14,5.89 14,5A1,1 0 0,1 15,4M2,12V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V12H13V20H11V12H2Z" />
+                  d="M22 10.92L19.26 9.33C21.9 7.08 19.25 2.88 16.08 4.31L15.21 4.68L15.1 3.72C15 2.64 14.44 1.87 13.7 1.42C12.06 .467 9.56 1.12 9.16 3.5L6.41 1.92C5.45 1.36 4.23 1.69 3.68 2.65L2.68 4.38C2.4 4.86 2.57 5.47 3.05 5.75L10.84 10.25L12.34 7.65L14.07 8.65L12.57 11.25L20.36 15.75C20.84 16 21.46 15.86 21.73 15.38L22.73 13.65C23.28 12.69 22.96 11.47 22 10.92M12.37 5C11.5 5.25 10.8 4.32 11.24 3.55C11.5 3.07 12.13 2.91 12.61 3.18C13.38 3.63 13.23 4.79 12.37 5M17.56 8C16.7 8.25 16 7.32 16.44 6.55C16.71 6.07 17.33 5.91 17.8 6.18C18.57 6.63 18.42 7.79 17.56 8M20.87 16.88C21.28 16.88 21.67 16.74 22 16.5V20C22 21.11 21.11 22 20 22H4C2.9 22 2 21.11 2 20V11H10.15L11 11.5V20H13V12.65L19.87 16.61C20.17 16.79 20.5 16.88 20.87 16.88Z" />
               </svg>
             </a>
           </div>
